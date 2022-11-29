@@ -11,11 +11,11 @@ const BannerItem = ({ slide }) => {
 
 
             <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 top-1/4">
-                <h1 className='text-5xl font-bold text-white'>Razan Sarker</h1>
+                <h1 className='text-5xl font-bold text-white'>Laptop Resale</h1>
             </div>
 
             <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 top-2/4">
-                <h1 className='text-5xl font-bold text-white'>Razan Sarker</h1>
+                <p className='font-bold text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, unde!</p>
             </div>
 
             <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 right-5 bottom-0">

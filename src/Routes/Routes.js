@@ -2,15 +2,17 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboardlayout from "../layoyt/Dashboardlayout";
 import Main from "../layoyt/Main";
 import Advertised from "../pages/Advertised/Advertised";
+import Blog from "../pages/Blog/Blog";
 import AddProduct from "../pages/Dashboard/AddProduct/AddProduct";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import MyDashboard from "../pages/Dashboard/MyDashboard/MyDashboard";
 import MyProduct from "../pages/Dashboard/MyProduct/MyProduct";
+import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home/Home";
 import Payment from "../pages/Home/Payment/Payment";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
-import AdminRoutes from "./AdminRoute/AdminRoutes";
+import AdminRoutes from "./AdminRoute/AdminRoute";
 import Privateroute from "./PrivateRoute/Privateroute";
 import SellerRoutes from "./SellerRoutes/SellerRoutes";
 
@@ -40,7 +42,16 @@ export const router = createBrowserRouter([
             //     element: <Payment></Payment>,
             //     loader: ({params}) => fetch(http://localhost:5000/products/${params.id})
             // },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
         ]
+    },
+
+    {
+        path: '*',
+        element: <Error></Error>
     },
     {
         path: '/dashboard',
@@ -61,7 +72,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/allusers',
-                element: <AdminRoutes><AllUsers /></AdminRoutes>
+                // element: <AdminRoute><AllUsers /></AdminRoute>
+                element: <AdminRoutes><AllUsers></AllUsers></AdminRoutes>
             },
         ]
     }
