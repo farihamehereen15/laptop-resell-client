@@ -33,7 +33,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div className="card w-full  shadowbox bg-primary text-primary-content my-5">
+            <div className="card w-full  shadowbox bg-primary text-primary-content my-10">
                 <div className="card-body">
                     <h1 className="card-title">4. React vs. Angular vs. Vue?</h1>
                     <p>Vue provides higher customizability and hence is easier to learn than Angular or React. Further, Vue has an overlap with Angular and React with respect to their functionality like the use of components. Hence, the transition to Vue from either of the two is an easy option.Popularity. According to a survey by Stack Overflow 40.13% of the developers believe that React is the most commonly used JavaScript Framework. Angular and Vue follow it with 22.96% and 18.97%, respectively. </p>
