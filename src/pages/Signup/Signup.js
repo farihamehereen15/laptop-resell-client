@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
@@ -8,9 +9,10 @@ import useToken from '../../hocks/useToken';
 const Signup = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const { createUser, updateUser } = useContext(AuthContext)
+    const { createUser, updateUser, googleLogIn } = useContext(AuthContext)
     const [signUpError, setSignUpError] = useState('')
     const [createdUserEmail, setCreatedUserEmail] = useState('')
+
 
     const [token] = useToken(createdUserEmail)
     const navigate = useNavigate()
@@ -45,7 +47,22 @@ const Signup = () => {
             })
     }
 
-    const saveUser = (name, email, allUsers) => {
+    // changes 
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleSignIn = () => {
+        googleLogIn(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                saveUser(user.displayName, user.email)
+
+            })
+            .catch(error => console.error(error))
+    }
+
+
+    const saveUser = (name, email, allUsers = "Buyer") => {
         const user = { name, email, allUsers }
         fetch('http://localhost:5000/users', {
             method: "POST",
@@ -59,6 +76,8 @@ const Signup = () => {
                 setCreatedUserEmail(email)
             })
     }
+
+
 
 
 
@@ -139,7 +158,7 @@ const Signup = () => {
 
                 <div className="divider">OR</div>
 
-                <button className='btn btn-outline w-full'>Continue with google</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline w-full'>Continue with google</button>
             </div>
 
         </div>
