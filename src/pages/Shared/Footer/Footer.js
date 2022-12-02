@@ -7,7 +7,7 @@ const Footers = () => {
             <div className='' >
 
 
-                <footer className="footer p-32 bg-dark text-white">
+                <footer className="footer p-32 bg-dark text-gray-600">
                     <div>
                         <img className='w-20' src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXBwbGUlMjBsYXB0b3B8ZW58MHx8MHx8&w=1000&q=80" alt="" />
                         <p>RESELL Industries Ltd.<br />Providing reliable tech since 2000</p>

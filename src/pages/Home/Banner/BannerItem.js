@@ -15,7 +15,7 @@ const BannerItem = ({ slide }) => {
             </div>
 
             <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 top-2/4">
-                <p className='font-bold text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, unde!</p>
+                <p className='font-bold text-white'>We are proud of our emphasis on high quality, tested and working products. Our business thrives on the basis of these principles of integrity, as we want our customers to be pleased with our products.</p>
             </div>
 
             <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 right-5 bottom-0">
