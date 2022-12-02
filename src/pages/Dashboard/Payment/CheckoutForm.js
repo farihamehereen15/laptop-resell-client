@@ -14,7 +14,7 @@ const CheckoutForm = ({ order }) => {
     const { price, email, _id } = order;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/create-payment-intent`, {
+        fetch(`https://laptop-resell-server-cyan.vercel.app/create-payment-intent`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const CheckoutForm = ({ order }) => {
 
             }
             // setProcessing(false)
-            fetch('http://localhost:5000/payments', {
+            fetch('https://laptop-resell-server-cyan.vercel.app/payments', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

@@ -26,7 +26,7 @@ const AdertisedModal = ({ products, seetCurrentProduct }) => {
             email
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://laptop-resell-server-cyan.vercel.app/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

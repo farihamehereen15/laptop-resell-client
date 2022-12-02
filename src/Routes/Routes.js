@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
             // {
             //     path: '/payment/:id',
             //     element: <Payment></Payment>,
-            //     loader: ({params}) => fetch(http://localhost:5000/products/${params.id})
+            //     loader: ({params}) => fetch(https://laptop-resell-server-cyan.vercel.app/products/${params.id})
             // },
             {
                 path: '/blog',
@@ -85,7 +85,7 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:id',
                 element: <Payment></Payment>,
-                loader: ({ params }) => fetch(`http://localhost:5000/orders/${params.id}`)
+                loader: ({ params }) => fetch(`https://laptop-resell-server-cyan.vercel.app/orders/${params.id}`)
             }
         ]
     }
